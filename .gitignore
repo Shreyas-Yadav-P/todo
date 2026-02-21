@@ -1,0 +1,9 @@
+.env
+db.sqlite3
+__pycache__/
+*.pyc
+venv/
+env/
+static/
+
+# Ignore the .env file that contains sensitive information
