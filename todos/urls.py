@@ -7,14 +7,7 @@ from django.contrib.auth.views import LogoutView
 
 
 urlpatterns = [
-    # Login Page
-    path('login/', CustomLoginView.as_view(), name='login'),
-    # Logout Page
-    path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
-    # Register Page
-    path('register/', RegisterPage.as_view(), name='register'),
-    # Home Page
-    path('', TaskList.as_view(), name='tasks'),
+    
     # Add Task
     path('addTask/', views.addTask, name='addTask'),
     # Mark as Done

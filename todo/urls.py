@@ -16,8 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+
+from todos.views import CustomLoginView, RegisterPage, TaskList
+from django.contrib.auth.views import LogoutView
 from . import views
 urlpatterns = [
+    # Login Page
+    path('login/', CustomLoginView.as_view(), name='login'),
+    # Logout Page
+    path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
+    # Register Page
+    path('register/', RegisterPage.as_view(), name='register'),
+    # Home Page
+    path('', TaskList.as_view(), name='tasks'),
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     
