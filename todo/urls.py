@@ -21,6 +21,8 @@ from todos.views import CustomLoginView, RegisterPage, TaskList
 from django.contrib.auth.views import LogoutView
 from . import views
 urlpatterns = [
+    # Admin Page
+    path('admin/', admin.site.urls),
     # Login Page
     path('login/', CustomLoginView.as_view(), name='login'),
     # Logout Page
@@ -29,8 +31,8 @@ urlpatterns = [
     path('register/', RegisterPage.as_view(), name='register'),
     # Home Page
     path('', TaskList.as_view(), name='tasks'),
-    path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    
+   
     
     #To Do
     path('todos/', include('todos.urls')),

@@ -122,6 +122,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
-Login_URL = 'login'
+LOGIN_URL = 'login'
 
 LOGIN_REDIRECT_URL = 'tasks'
