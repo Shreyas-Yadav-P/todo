@@ -32,7 +32,6 @@ urlpatterns = [
     # Home Page
     path('', TaskList.as_view(), name='tasks'),
     
-   
     
     #To Do
     path('todos/', include('todos.urls')),
