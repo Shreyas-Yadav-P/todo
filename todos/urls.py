@@ -12,5 +12,7 @@ urlpatterns = [
     path('edit_task/<int:pk>/', views.edit_task, name='edit_task'),
     # Delete Task
     path('delete_task/<int:pk>/', views.delete_task, name='delete_task'),
+    # API List
+    path('api/tasks/', views.todo_api_list, name='todo_api_list'),
  
 ]
